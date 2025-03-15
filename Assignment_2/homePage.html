@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-wrapper {
+            background-color: #0a192f;
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: relative;
+            z-index: 10;
+          }
+          
+          .logo {
+            color: #ffffff;
+            font-family: "Space Grotesk", sans-serif;
+            text-align: center;
+          }
+          
+          .logo-title {
+            font-size: 24px;
+            font-weight: 700;
+          }
+          
+          .logo-subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 4px;
+          }
+          
+          .main-nav {
+            flex-grow: 0;
+          }
+          
+          .nav-list {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .nav-link {
+            color: #ffffff;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.3s;
+          }
+          
+          .nav-link:hover {
+            opacity: 0.8;
+          }
+          
+          .mobile-menu-toggle {
+            display: none;
+            color: #ffffff;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+          }
+          
+          .main-content {
+            position: relative;
+            padding: 60px 40px;
+          }
+          
+          .decorative-line {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
+            transform: rotate(-45deg);
+          }
+          
+          .decorative-line-1 {
+            top: 100px;
+            left: 200px;
+          }
+          
+          .decorative-line-2 {
+            top: 50px;
+            right: 300px;
+          }
+          
+          .hero-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+          }
+          
+          .hero-title {
+            color: #ffffff;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+          }
+          
+          .hero-description {
+            color: #a8b2d1;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .hero-image-container {
+            position: relative;
+            margin-top: 40px;
+          }
+          
+          .hero-image {
+            width: 100%;
+            max-width: 1466px;
+            border-radius: 8px;
+          }
+          
+          .explore-button {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-family: "Space Grotesk", sans-serif;
+            padding: 12px 40px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            background-color: rgba(88, 80, 236, 0.8);
+            border: none;
+          }
+          
+          .explore-button:hover {
+            background-color: rgba(88, 80, 236, 1);
+          }
+          
+          @media (max-width: 991px) {
+            .nav-list {
+              gap: 20px;
+            }
+          
+            .hero-title {
+              font-size: 36px;
+            }
+          
+            .hero-description {
+              font-size: 18px;
+            }
+          }
+          
+          @media (max-width: 640px) {
+            .main-nav {
+              display: none;
+            }
+          
+            .mobile-menu-toggle {
+              display: block;
+            }
+          
+            .main-content {
+              padding: 40px 20px;
+            }
+          
+            .hero-title {
+              font-size: 28px;
+              padding: 0 20px;
+            }
+          
+            .hero-description {
+              font-size: 16px;
+              padding: 0 20px;
+            }
+          
+            .hero-image-container {
+              margin-top: 20px;
+            }
+          
+            .explore-button {
+              padding: 10px 30px;
+              font-size: 14px;
+            }
+          }
+          
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <header class="header">
+    <div class="logo">
+      <span class="logo-title">VIRTUAL REALITY</span>
+      <p class="logo-subtitle">Astronomy Tours</p>
+    </div>
+
+    <nav>
+      <ul>
+          <li><a href="sun.html">Sun</a></li>
+          <li><a href="mercury.html">Mercury</a></li>
+          <li><a href="venus.html">Venus</a></li>
+          <li><a href="earth.html">Earth</a></li>
+          <li><a href="mars.html">Mars</a></li>
+          <li><a href="jupiter.html">Jupiter</a></li>
+          <li><a href="saturn.html">Saturn</a></li>
+          <li><a href="uranus.html">Uranus</a></li>
+          <li><a href="neptune.html">Neptune</a></li>
+          <li><a href="pluto.html">Pluto</a></li>
+          <li><a href="moon.html">Moon</a></li>
+      </ul>
+  </nav>
+
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <div class="decorative-line decorative-line-1" aria-hidden="true"></div>
+    <div class="decorative-line decorative-line-2" aria-hidden="true"></div>
+
+    <section class="hero-section">
+      <h1 class="hero-title">
+        Explore the universe and learn about astronomy in a virtual setting.
+      </h1>
+      <p class="hero-description">
+        Embark on an immersive virtual reality tour through space and uncover
+        the wonders of astronomy.
+      </p>
+      <div class="hero-image-container">
+        <img
+          src="images/Earth (1).png"
+          alt="Earth View"
+          class="hero-image"
+        />
+        <button class="explore-button">EXPLORE ↓</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>

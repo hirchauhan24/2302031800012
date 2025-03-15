@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn Information</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #0a0f24;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .planet-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+        }
+        .planet-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .planet-description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .planet-image-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            margin-bottom: 40px;
+        }
+        .planet-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .stat-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="sun.html">Sun</a></li>
+            <li><a href="mercury.html">Mercury</a></li>
+            <li><a href="venus.html">Venus</a></li>
+            <li><a href="earth.html">Earth</a></li>
+            <li><a href="mars.html">Mars</a></li>
+            <li><a href="jupiter.html">Jupiter</a></li>
+            <li><a href="saturn.html">Saturn</a></li>
+            <li><a href="uranus.html">Uranus</a></li>
+            <li><a href="neptune.html">Neptune</a></li>
+            <li><a href="pluto.html">Pluto</a></li>
+            <li><a href="moon.html">Moon</a></li>
+        </ul>
+    </nav>
+    <div class="planet-container">
+        <h1 class="planet-title">6. Saturn</h1>
+        <p class="planet-description">
+            Saturn is the sixth planet from the Sun and the second-largest planet in our solar system.
+            It is mostly composed of hydrogen and helium and is surrounded by a beautiful ring system.
+        </p>
+        <div class="planet-image-container">
+            <img src="images/Saturn.png" 
+                alt="Saturn" class="planet-image">
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <p class="stat-title">Diameter</p>
+                <p class="stat-value">72,400</p>
+                <p class="stat-label">Miles</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-title">Day Time Temperature</p>
+                <p class="stat-value">-178°</p>
+                <p class="stat-label">Celsius</p>
+            </div>
+            <div class="stat-card" style="grid-column: span 2;">
+                <p class="stat-title">Night Time Temperature</p>
+                <p class="stat-value">-185°</p>
+                <p class="stat-label">Celsius</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

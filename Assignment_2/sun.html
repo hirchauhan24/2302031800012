@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Information</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #0a0f1f;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container for Centered Layout */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Image Container */
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* Sun Image Styling */
+        .sun-image {
+            width: 80%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* Title */
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Description */
+        .description {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            flex-direction: row; /* Changed from column to row */
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Individual Stat Card */
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #f39c12;
+            padding: 20px;
+            width: 250px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .stat-unit {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 40px;
+            }
+            .description {
+                font-size: 16px;
+            }
+            .sun-image {
+                width: 100%;
+            }
+            .stats-container {
+                flex-direction: column; /* Stacks them in smaller screens */
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="sun.html">Sun</a></li>
+            <li><a href="mercury.html">Mercury</a></li>
+            <li><a href="venus.html">Venus</a></li>
+            <li><a href="earth.html">Earth</a></li>
+            <li><a href="mars.html">Mars</a></li>
+            <li><a href="jupiter.html">Jupiter</a></li>
+            <li><a href="saturn.html">Saturn</a></li>
+            <li><a href="uranus.html">Uranus</a></li>
+            <li><a href="neptune.html">Neptune</a></li>
+            <li><a href="pluto.html">Pluto</a></li>
+            <li><a href="moon.html">Moon</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Image at the Top -->
+        <div class="image-container">
+            <img src="images/Sun.png" alt="The Sun" class="sun-image">
+        </div>
+
+        <!-- Sun Information -->
+        <h1 class="title">The Sun</h1>
+        <p class="description">
+            The Sun is a huge, glowing ball of hot plasma at the center of our solar system. It provides the energy needed for life on Earth, radiating outward in the form of light and heat.
+        </p>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h2 class="stat-title">Diameter</h2>
+                <p class="stat-value">870,000</p>
+                <p class="stat-unit">Miles</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="stat-title">Temperature</h2>
+                <p class="stat-value">±5,500°</p>
+                <p class="stat-unit">Celsius</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

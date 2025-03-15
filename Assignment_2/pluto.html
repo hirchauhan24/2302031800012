@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluto Information</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0a0d1c;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .planet-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 48px;
+            justify-content: center;
+        }
+        .planet-image img {
+            width: 450px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .planet-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: left;
+            max-width: 400px;
+        }
+        .planet-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .planet-description {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .stats-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .stats-row {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            justify-content: center;
+        }
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            border: 1px solid #4b0082;
+        }
+        .stat-title {
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .stat-unit {
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            .planet-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .planet-info {
+                text-align: center;
+            }
+            .planet-image img {
+                width: 100%;
+                max-width: 400px;
+            }
+            .stats-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="sun.html">Sun</a></li>
+            <li><a href="mercury.html">Mercury</a></li>
+            <li><a href="venus.html">Venus</a></li>
+            <li><a href="earth.html">Earth</a></li>
+            <li><a href="mars.html">Mars</a></li>
+            <li><a href="jupiter.html">Jupiter</a></li>
+            <li><a href="saturn.html">Saturn</a></li>
+            <li><a href="uranus.html">Uranus</a></li>
+            <li><a href="neptune.html">Neptune</a></li>
+            <li><a href="pluto.html">Pluto</a></li>
+            <li><a href="moon.html">Moon</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="planet-content">
+            <figure class="planet-image">
+                <img src="images/Pluto 2.png" alt="Pluto">
+            </figure>
+            <div class="planet-info">
+                <h1 class="planet-title">9. PLUTO</h1>
+                <p class="planet-description">
+                    Pluto is a dwarf planet in the Kuiper Belt, a distant region of our solar system. 
+                    It was once considered the ninth planet but was reclassified in 2006 by the 
+                    International Astronomical Union (IAU). Pluto is about 1/6th the size of Earth 
+                    and is smaller than Earth's moon.
+                </p>
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <h2 class="stat-title">Diameter</h2>
+                        <p class="stat-value">1,477</p>
+                        <p class="stat-unit">Miles</p>
+                    </article>
+                    <div class="stats-row">
+                        <article class="stat-card">
+                            <h2 class="stat-title">Daytime Temperature</h2>
+                            <p class="stat-value">-233°</p>
+                            <p class="stat-unit">Celsius</p>
+                        </article>
+                        <article class="stat-card">
+                            <h2 class="stat-title">Nighttime Temperature</h2>
+                            <p class="stat-value">-233°</p>
+                            <p class="stat-unit">Celsius</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

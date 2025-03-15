@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #0a0d1c;
+            color: #ffffff;
+            font-family: "Space Grotesk", sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            margin: auto;
+            padding: 40px 20px;
+            max-width: 800px;
+        }
+
+        .planet-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .planet-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .planet-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e5e7eb;
+            margin: 0 20px;
+        }
+
+        .planet-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background-color: #1f2937;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .stat-icon {
+            font-size: 20px;
+        }
+
+        .stat-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .planet-image {
+            width: 60%; /* Reduced size */
+            max-width: 250px; /* Ensuring it doesn't get too large */
+            aspect-ratio: 1 / 1;
+            border-radius: 24px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .planet-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .planet-title {
+                font-size: 28px;
+            }
+
+            .planet-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="sun.html">Sun</a></li>
+                <li><a href="mercury.html">Mercury</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="earth.html">Earth</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptune.html">Neptune</a></li>
+                <li><a href="pluto.html">Pluto</a></li>
+                <li><a href="moon.html">Moon</a></li>
+            </ul>
+        </nav>
+        <h1 class="planet-title">1. Mercury</h1>
+        <p class="planet-description">
+            Mercury is the closest planet to the Sun and is known for its extreme temperatures and barren, rocky surface.
+            It is one of the four terrestrial planets in our solar system, characterized by their solid, rocky composition.
+        </p>
+
+        <div class="planet-stats">
+            <div class="stat-card">
+                <i class="ti ti-temperature stat-icon"></i>
+                <div class="stat-content">
+                    <span class="stat-label">Day Time Temperature</span>
+                    <span class="stat-value">±430° Celsius</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="ti ti-ruler stat-icon"></i>
+                <div class="stat-content">
+                    <span class="stat-label">Diameter</span>
+                    <span class="stat-value">3,032 Miles</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="ti ti-temperature stat-icon"></i>
+                <div class="stat-content">
+                    <span class="stat-label">Night Time Temperature</span>
+                    <span class="stat-value">-180° Celsius</span>
+                </div>
+            </div>
+        </div>
+
+        <figure class="planet-image">
+            <img src="images/Mercury.png" alt="Mercury">
+        </figure>
+    </div>
+
+</body>
+</html>

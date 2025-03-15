@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jupiter Planet</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      :root {
+        --bg-color: rgb(2, 6, 23);
+        --text-color: white;
+        --card-bg: rgba(255, 255, 255, 0.1);
+        --secondary-text: rgb(113, 113, 122);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        position: relative;
+        padding: 2.5rem;
+        min-height: 100vh;
+      }
+
+      .planet-image {
+        background-image: url("images/Jupiter_1.png");
+        background-position:right;
+        /*background-size: cover;*/
+        border-radius: 100%;
+        height: 600px;
+        width: 600px;
+      }
+
+      .planet-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: flex-end;
+        padding-left: 2.5rem;
+      }
+
+      .planet-title {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+      }
+
+      .planet-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 800px;
+        margin-bottom: 2.5rem;
+      }
+
+      .stats-container {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .stat-card {
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+        background-color: var(--card-bg);
+        min-width: 200px;
+      }
+
+      .stat-icon {
+        margin-bottom: 0.625rem;
+      }
+
+      .stat-icon i {
+        font-size: 1.5rem;
+      }
+
+      .stat-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stat-value {
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin-bottom: 0.375rem;
+      }
+
+      .stat-unit {
+        font-size: 1rem;
+        color: var(--secondary-text);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 1.25rem;
+        }
+
+        .planet-image {
+          height: 400px;
+          width: 400px;
+          margin: 0 auto;
+        }
+
+        .planet-info {
+          padding-left: 0;
+          padding-top: 2.5rem;
+          text-align: center;
+        }
+
+        .stats-container {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .planet-image {
+          height: 300px;
+          width: 300px;
+        }
+
+        .planet-title {
+          font-size: 2.25rem;
+        }
+
+        .planet-description {
+          font-size: 0.875rem;
+        }
+
+        .stat-card {
+          padding: 1rem;
+          min-width: 150px;
+        }
+
+        .stat-value {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+          <li><a href="sun.html">Sun</a></li>
+          <li><a href="mercury.html">Mercury</a></li>
+          <li><a href="venus.html">Venus</a></li>
+          <li><a href="earth.html">Earth</a></li>
+          <li><a href="mars.html">Mars</a></li>
+          <li><a href="jupiter.html">Jupiter</a></li>
+          <li><a href="saturn.html">Saturn</a></li>
+          <li><a href="uranus.html">Uranus</a></li>
+          <li><a href="neptune.html">Neptune</a></li>
+          <li><a href="pluto.html">Pluto</a></li>
+          <li><a href="moon.html">Moon</a></li>
+      </ul>
+  </nav>
+    <main class="container">
+      <div
+        class="planet-image"
+        role="img"
+        aria-label="Jupiter planet image"
+      ></div>
+      <br>
+      <section class="planet-info">
+        <h1 class="planet-title">5.Jupiter</h1>
+        <p class="planet-description">
+          Jupiter is the largest planet in our solar system, and is described as
+          a gas giant. It's made up of mostly hydrogen and helium gas, and has
+          no solid surface. Jupiter is more than 317 times the mass of Earth.
+          Its diameter is 11 times that of Earth
+        </p>
+        <div class="stats-container">
+          <article class="stat-card">
+            <header class="stat-icon">
+              <i class="ti ti-arrows-maximize"></i>
+            </header>
+            <div class="stat-content">
+              <strong class="stat-value">88,695</strong>
+              <span class="stat-unit">Miles</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <header class="stat-icon">
+              <i class="ti ti-temperature"></i>
+            </header>
+            <div class="stat-content">
+              <strong class="stat-value">-110°</strong>
+              <span class="stat-unit">Celsius</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <header class="stat-icon">
+              <i class="ti ti-temperature"></i>
+            </header>
+            <div class="stat-content">
+              <strong class="stat-value">-110°</strong>
+              <span class="stat-unit">Celsius</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

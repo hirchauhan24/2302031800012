@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f172a;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #0f172a 0%, #1e293b 100%);
+}
+
+.gradient-line {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0.8) 0%,
+    rgba(99, 102, 241, 0) 100%
+  );
+}
+
+.gradient-line-top {
+  width: 120px;
+  height: 2px;
+  transform: rotate(225deg);
+  top: 10%;
+  left: 5%;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.gradient-line-middle {
+  width: 80px;
+  height: 1px;
+  transform: rotate(225deg);
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+.gradient-line-bottom {
+  width: 100px;
+  height: 1.5px;
+  transform: rotate(225deg);
+  bottom: 10%;
+  right: 5%;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+}
+
+.auth-content {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-title {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.auth-methods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.social-auth-btn:hover,
+.social-auth-btn:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+.auth-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.divider {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 24px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider-text {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #0f172a;
+  padding: 0 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.auth-input:focus {
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.forgot-password-link {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.forgot-password-link:hover,
+.forgot-password-link:focus {
+  color: rgba(255, 255, 255, 0.7);
+  outline: none;
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #6366f1, #4f46e5);
+  border: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.signup-prompt {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.signup-link {
+  color: #6366f1;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover,
+.signup-link:focus {
+  color: #4f46e5;
+  text-decoration: underline;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .auth-content {
+    padding: 32px;
+    max-width: 360px;
+  }
+
+  .auth-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-content {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .auth-title {
+    font-size: 24px;
+  }
+
+  .social-auth-btn,
+  .auth-input {
+    font-size: 14px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <main class="auth-container">
+        <div class="gradient-line gradient-line-top"></div>
+        <div class="gradient-line gradient-line-middle"></div>
+        <div class="gradient-line gradient-line-bottom"></div>
+      
+        <section class="auth-content">
+          <h1 class="auth-title">Sign In</h1>
+      
+          <div class="auth-methods">
+            <button class="social-auth-btn google-auth">
+              <img
+                src="images/google.png"
+                alt="Google Icon"
+                class="auth-icon"
+              />
+              <span>Continue with Google</span>
+            </button>
+      
+            <button class="social-auth-btn facebook-auth">
+              <img
+                src="images/facebook.png"
+                alt="Facebook Icon"
+                class="auth-icon"
+              />
+              <span>Continue with Facebook</span>
+            </button>
+      
+            <div class="divider">
+              <span class="divider-text">or</span>
+            </div>
+      
+            <form class="auth-form">
+              <div class="form-group">
+                <label for="email" class="visually-hidden">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="auth-input"
+                  placeholder="E-mail"
+                  aria-label="Email address"
+                  required
+                />
+              </div>
+      
+              <div class="form-group">
+                <label for="password" class="visually-hidden">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="auth-input"
+                  placeholder="Password"
+                  aria-label="Password"
+                  required
+                />
+              </div>
+      
+              <button type="button" class="forgot-password-link">
+                Forgot password?
+              </button>
+      
+              <button type="submit" class="submit-btn">Sign in</button>
+      
+              <p class="signup-prompt">
+                don't have an account?
+                <a href="#" class="signup-link">Create a account</a>
+              </p>
+            </form>
+          </div>
+        </section>
+      </main>
+      
+</body>
+</html>

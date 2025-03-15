@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet Details - Venus</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .planet-container {
+            background-color: #0b0f1a;
+            color: white;
+            padding: 40px;
+            position: relative;
+            min-height: 100vh;
+            font-family: "Inter", sans-serif;
+          }
+          
+          .planet-title {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+          }
+          
+          .planet-description {
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 16px;
+          }
+          
+          .stats-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+          }
+          
+          .stat-card {
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+          
+          .stat-icon {
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: block;
+          }
+          
+          .stat-content {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+          }
+          
+          .stat-value {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          
+          .stat-unit {
+            font-size: 16px;
+          }
+          
+          .planet-image {
+            position:relative;
+            top:initial;
+            right:initial;
+            width: 700%;
+            height: 500%;
+            background-image: url("images/venus_1.png  ");
+            background-size:auto;
+            background-position:right;
+            background-repeat: no-repeat;
+          }
+          
+          @media (max-width: 991px) {
+            .planet-title {
+              font-size: 36px;
+            }
+          
+            .planet-description {
+              font-size: 14px;
+              max-width: 60%;
+            }
+          
+            .stats-container {
+              max-width: 60%;
+            }
+          
+            .planet-image {
+              width: 40%;
+            }
+          }
+          
+          @media (max-width: 640px) {
+            .planet-container {
+              padding: 20px;
+            }
+          
+            .planet-title {
+              font-size: 28px;
+            }
+          
+            .planet-description {
+              font-size: 14px;
+              max-width: 100%;
+            }
+          
+            .stats-container {
+              max-width: 100%;
+              flex-direction: column;
+            }
+            
+            .stat-card {
+              width: 100%;
+            }
+          
+            .planet-image {
+              position: relative;
+              width: 100%;
+              height: 300px;
+              margin-top: 20px;
+            }
+          }
+          
+    </style>
+  </head>
+  <body>
+    <main class="planet-container">
+      <div class="planet-image" role="img" aria-label="Image of Venus"></div>
+      <nav>
+        <ul>
+          <li><a href="sun.html">Sun</a></li>
+          <li><a href="mercury.html">Mercury</a></li>
+          <li><a href="venus.html">Venus</a></li>
+          <li><a href="earth.html">Earth</a></li>
+          <li><a href="mars.html">Mars</a></li>
+          <li><a href="jupiter.html">Jupiter</a></li>
+          <li><a href="saturn.html">Saturn</a></li>
+          <li><a href="uranus.html">Uranus</a></li>
+          <li><a href="neptune.html">Neptune</a></li>
+              <li><a href="pluto.html">Pluto</a></li>
+              <li><a href="moon.html">Moon</a></li>
+            </ul>
+          </nav>
+          <article class="planet-content">
+            <h1 class="planet-title">2. Venus</h1>
+            
+            <p class="planet-description">
+              Venus is a rocky planet with a thick atmosphere, volcanoes, and a
+              surface temperature of 464°C. It's often called Earth's twin because
+              it's similar in size and density. Venus is the third brightest object
+              in the sky after the Sun and Moon. Venus spins slowly in the opposite
+              direction from most planets.
+            </p>
+            
+            <section class="stats-container">
+              <div class="stat-card">
+                <span class="stat-icon">
+                  <i class="ti ti-arrows-maximize" aria-hidden="true"></i>
+                </span>
+                <div class="stat-content">
+                  <span class="stat-label">Diameter</span>
+                  <span class="stat-value">7,520.8</span>
+                  <span class="stat-unit">Miles</span>
+                </div>
+              </div>
+              
+              <div class="stat-card">
+            <span class="stat-icon">
+              <i class="ti ti-temperature" aria-hidden="true"></i>
+            </span>
+            <div class="stat-content">
+              <span class="stat-label">Day time Temperature</span>
+              <span class="stat-value">460°</span>
+              <span class="stat-unit">Celsius</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">
+              <i class="ti ti-temperature" aria-hidden="true"></i>
+            </span>
+            <div class="stat-content">
+              <span class="stat-label">Night time Temperature</span>
+              <span class="stat-value">460°</span>
+              <span class="stat-unit">Celsius</span>
+            </div>
+            
+          </div>
+        </section>
+      </article>
+      <img src="images/venus_1.png" alt="Venus">
+    </main>
+  </body>
+  </html>

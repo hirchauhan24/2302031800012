@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .planet-page {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            background-color: #0a0b14;
+            color: #ffffff;
+            font-family: "Space Grotesk", sans-serif;
+          }
+          
+          .planet-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 48px;
+          }
+          
+          .planet-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 48px;
+          }
+          
+          .planet-image-section {
+            width: 50%;
+          }
+          
+          .planet-image {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+          }
+          
+          .planet-details-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+          }
+          
+          .planet-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+          }
+          
+          .planet-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e5e7eb;
+            margin: 0;
+          }
+          
+          .measurement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+          }
+          
+          .measurement-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+          }
+          
+          .measurement-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+          }
+          
+          .measurement-icon {
+            font-size: 24px;
+          }
+          
+          .measurement-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0;
+          }
+          
+          .measurement-value {
+            font-size: 32px;
+            font-weight: 700;
+          }
+          
+          .measurement-unit {
+            font-size: 24px;
+          }
+          
+          @media (max-width: 991px) {
+            .planet-container {
+              padding: 32px;
+            }
+          
+            .planet-content {
+              flex-direction: column;
+              gap: 32px;
+            }
+          
+            .planet-image-section,
+            .planet-details-section {
+              width: 100%;
+            }
+          }
+          
+          @media (max-width: 640px) {
+            .planet-container {
+              padding: 24px;
+            }
+          
+            .measurement-grid {
+              grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+          }
+          
+    </style>
+</head>
+<body>
+  
+  <main class="planet-page">
+      <article class="planet-container">
+        <nav>
+            <ul>
+                <li><a href="sun.html">Sun</a></li>
+                <li><a href="mercury.html">Mercury</a></li>
+                <li><a href="venus.html">Venus</a></li>
+                <li><a href="earth.html">Earth</a></li>
+                <li><a href="mars.html">Mars</a></li>
+                <li><a href="jupiter.html">Jupiter</a></li>
+                <li><a href="saturn.html">Saturn</a></li>
+                <li><a href="uranus.html">Uranus</a></li>
+                <li><a href="neptune.html">Neptune</a></li>
+                <li><a href="pluto.html">Pluto</a></li>
+                <li><a href="moon.html">Moon</a></li>
+            </ul>
+        </nav><
+      <div class="planet-content">
+        <section class="planet-image-section">
+          <img
+            src="images/Neptune 2.png"
+            alt="Neptune - The ice giant planet"
+            class="planet-image"
+          />
+        </section>
+  
+        <section class="planet-details-section">
+          <h1 class="planet-title">8. Neptune</h1>
+          <p class="planet-description">
+            Neptune is a cold, windy, and dark planet that's the farthest planet
+            from the sun in our solar system. It's known as an ice giant because
+            it's made of a thick fog of water, ammonia, and methane over a solid
+            core. Neptune is the only planet in our solar system not visible to
+            the naked eye.
+          </p>
+  
+          <div class="measurement-grid">
+            <article class="measurement-card">
+              <header class="measurement-header">
+                <i class="ti ti-ruler measurement-icon" aria-hidden="true"></i>
+                <h2 class="measurement-title">Diameter</h2>
+              </header>
+              <div class="measurement-value">30,59</div>
+              <div class="measurement-unit">8.8 Miles</div>
+            </article>
+  
+            <article class="measurement-card">
+              <header class="measurement-header">
+                <i
+                  class="ti ti-temperature measurement-icon"
+                  aria-hidden="true"
+                ></i>
+                <h2 class="measurement-title">Day time Temperature</h2>
+              </header>
+              <div class="measurement-value">-214°</div>
+              <div class="measurement-unit">Celsius</div>
+            </article>
+  
+            <article class="measurement-card">
+              <header class="measurement-header">
+                <i
+                  class="ti ti-temperature measurement-icon"
+                  aria-hidden="true"
+                ></i>
+                <h2 class="measurement-title">Night time Temperature</h2>
+              </header>
+              <div class="measurement-value">-200°</div>
+              <div class="measurement-unit">Celsius</div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+  
+    
+</body>
+</html>
