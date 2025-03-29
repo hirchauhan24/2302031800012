@@ -1,0 +1,29 @@
+import numpy as np
+import pandas as pd
+
+def get_winner(player_1, player_2):
+    choices = np.array(["rock", "paper", "scissors"])
+    results = pd.DataFrame(
+        [["Draw", "Player 2 wins!", "Player 1 wins!"],
+         ["Player 1 wins!", "Draw", "Player 2 wins!"],
+         ["Player 2 wins!", "Player 1 wins!", "Draw"]],
+        index=choices, columns=choices
+    )
+    return results.loc[player_1, player_2]
+
+def rock_paper_scissors():
+    choices = ["rock", "paper", "scissors"]
+    while True:
+        p1_call = input("Player 1, Enter rock/paper/scissors: ").strip().lower()
+        p2_call = input("Player 2, Enter rock/paper/scissors: ").strip().lower()
+        
+        if p1_call not in choices or p2_call not in choices:
+            print("Invalid input. Please enter a valid choice.")
+            continue
+        
+        result = get_winner(p1_call, p2_call)
+        print(result)
+        if result != "Draw":
+            break
+
+rock_paper_scissors()
