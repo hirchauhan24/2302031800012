@@ -1,0 +1,37 @@
+<!-- ✅ Title: Tic Tac Toe Game in React -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tic Tac Toe in React</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 5px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .square {
+      width: 100px;
+      height: 100px;
+      font-size: 2em;
+      text-align: center;
+      line-height: 100px;
+      border: 1px solid #333;
+      cursor: pointer;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Load components -->
+  <script type="text/babel" src="Square.js"></script>
+  <script type="text/babel" src="App.js"></script>
+</body>
+</html>
