@@ -1,0 +1,36 @@
+<!-- React Parent and Child Components -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parent & Child in React</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //  Child component receiving props
+    const Child = ({ message }) => {
+      return <h2>Child says: {message}</h2>;
+    };
+
+    //  Parent component sending props to child
+    const Parent = () => {
+      const parentMessage = "Hello from Parent!";
+      return (
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <h1>Parent Component</h1>
+          <Child message={parentMessage} />
+        </div>
+      );
+    };
+
+    //  Render the parent component
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Parent />);
+  </script>
+</body>
+</html>

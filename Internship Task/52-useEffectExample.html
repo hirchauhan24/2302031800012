@@ -1,0 +1,49 @@
+<!--  useEffect Examples in React -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React useEffect Example</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    //  Component with useEffect
+    const Timer = () => {
+      const [count, setCount] = useState(0);
+
+      //  useEffect runs after every render
+      useEffect(() => {
+        console.log(`Component rendered. Current count: ${count}`);
+      });
+
+      //  useEffect with empty dependency = runs once on mount
+      useEffect(() => {
+        console.log("Component mounted");
+      }, []);
+
+      //  useEffect that runs only when 'count' changes
+      useEffect(() => {
+        document.title = `Count: ${count}`;
+      }, [count]);
+
+      return (
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <h2>useEffect Demo</h2>
+          <p>Count: {count}</p>
+          <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Timer />);
+  </script>
+</body>
+</html>

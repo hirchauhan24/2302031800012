@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two Tables Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      width: 80%;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #ccc;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tfoot {
+      background-color: #eee;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-family: Arial;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Table 1: Only Rowspan and Colspan -->
+  <h2>Task 1: Table with Colspan and Rowspan</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Rahul</td>
+      <td>Math</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Science</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>Priya</td>
+      <td colspan="2">Math + Science: 95</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Amit</td>
+      <td>English</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Social Studies</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>Neha</td>
+      <td colspan="2">English + Social Studies: 90</td>
+    </tr>
+    <tr>
+      <td colspan="2">Total Marks</td>
+      <td>460</td>
+    </tr>
+    <tr>
+      <td colspan="3">Average Marks: 76.67</td>
+    </tr>
+  </table>
+
+  <!-- ✅ Table 2: Rowspan, Colspan + Other Features -->
+  <h2>Task 2: Table with Colspan, Rowspan, and More</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Day</th>
+      <th>Shift</th>
+      <th>Timing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">Aman</td>
+      <td>Monday</td>
+      <td>Morning</td>
+      <td>9am - 1pm</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td colspan="2">Same as Monday</td>
+    </tr>
+    
+    <tr>
+      <td rowspan="2">Neha</td>
+      <td>Wednesday</td>
+      <td>Evening</td>
+      <td>2pm - 6pm</td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td>Night</td>
+      <td>6pm - 10pm</td>
+    </tr>
+
+    <tr>
+      <td>Rohan</td>
+      <td>Thurs & Fri</td>
+      <td colspan="2">Full Day: 9am - 6pm</td>
+    </tr>
+
+    <tr>
+      <td rowspan="2">Simran</td>
+      <td>Monday</td>
+      <td>Evening</td>
+      <td>3pm - 7pm</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td colspan="2">On Leave</td>
+    </tr>
+
+    <tr>
+      <td rowspan="2">Vikas</td>
+      <td>Wednesday</td>
+      <td>Morning</td>
+      <td>8am - 12pm</td>
+    </tr>
+    <tr>
+      <td>Thursday</td>
+      <td>Afternoon</td>
+      <td>12pm - 4pm</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Schedule generated on: 29 June 2025</td>
+    </tr>
+  </tfoot>
+</table>
+</body>
+</html>

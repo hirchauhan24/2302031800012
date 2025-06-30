@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Map Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f7f7f7;
+      padding: 40px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .map-description {
+      color: #555;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Image Map</h1>
+  <p>Click on different parts of the image:</p>
+
+  <!-- Better Image with Map -->
+  <img src="images/imgmap.png" alt="Web Languages" usemap="#htmlmap">
+
+  <!-- Map Definition -->
+  <map name="htmlmap">
+    <!-- HTML circle -->
+    <area shape="circle" coords="65,70,50" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" alt="HTML" target="_blank">
+
+    <!-- CSS circle -->
+    <area shape="circle" coords="160,65,50" href="https://developer.mozilla.org/en-US/docs/Web/HTML" alt="CSS" target="_blank">
+
+    <!-- JS circle -->
+    <area shape="circle" coords="112,175,50" href="https://developer.mozilla.org/en-US/docs/Web/CSS" alt="JavaScript" target="_blank">
+  </map>
+
+  <div class="map-description">
+    <p><strong>HTML:</strong> Opens MDN HTML documentation.</p>
+    <p><strong>CSS:</strong> Opens MDN CSS documentation.</p>
+    <p><strong>JavaScript:</strong> Opens MDN JS documentation.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blur & Filter Effects</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f5;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .box {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+    }
+
+    .box:hover img.blur {
+      filter: blur(4px);
+    }
+
+    .box:hover img.brightness {
+      filter: brightness(60%);
+    }
+
+    .box:hover img.grayscale {
+      filter: grayscale(100%);
+    }
+
+    .box:hover img.sepia {
+      filter: sepia(80%);
+    }
+
+    .label {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      width: 100%;
+      padding: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <img src="images/cat.jpg" class="blur" alt="Blur Image">
+    <div class="label">Hover to Blur</div>
+  </div>
+
+  <div class="box">
+    <img src="images/dog.jpg" class="brightness" alt="Brightness Image">
+    <div class="label">Hover to Dim</div>
+  </div>
+
+  <div class="box">
+    <img src="images/tiger.jpg" class="grayscale" alt="Grayscale Image">
+    <div class="label">Hover to Grayscale</div>
+  </div>
+
+  <div class="box">
+    <img src="images/lion.jpg" class="sepia" alt="Sepia Image">
+    <div class="label">Hover to Sepia</div>
+  </div>
+
+</body>
+</html>

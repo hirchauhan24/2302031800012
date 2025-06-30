@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Warm Themed Website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fdf6ec;
+      color: #4e342e;
+    }
+
+    nav {
+      background-color: #a0522d;
+      padding: 15px 30px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fffaf0;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffe4c4;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #6b4226;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #d2691e;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      background-color: #b55616;
+    }
+
+    .product-card {
+      background: #fff6e5;
+      border: 1px solid #d6bfa4;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 4px 12px rgba(160, 82, 45, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #b9a087;
+      border-radius: 5px;
+      background-color: #fffaf3;
+    }
+
+    footer {
+      background: #6b4226;
+      color: white;
+      padding: 18px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h1>Welcome to Our Cozy Corner</h1>
+    <p>Explore our handpicked items made with love and care. Dive into a warm experience.</p>
+    <button class="btn" onclick="document.getElementById('products').scrollIntoView()">View Products</button>
+  </section>
+
+  <section id="products">
+    <h1>Our Products</h1>
+    <div class="product-card">
+      <h3>Clay Mug</h3>
+      <p>Perfectly handcrafted clay mug for your morning brew.</p>
+    </div>
+    <div class="product-card">
+      <h3>Wool Blanket</h3>
+      <p>Keep warm with our ultra-soft cozy wool blankets.</p>
+    </div>
+    <div class="product-card">
+      <h3>Aromatic Candle</h3>
+      <p>Fill your space with warmth and calming scents.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 CozyCorner. All rights reserved.
+  </footer>
+
+</body>
+</html>

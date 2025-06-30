@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #fdf6f0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #5c3d6f;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f4d3d3;
+      color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fdf1f1;
+    }
+
+    .highlight {
+      background-color: #e6c2c2;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔹 Basic Table</h2>
+  <table>
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Asha</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Rohan</td>
+      <td>87</td>
+    </tr>
+  </table>
+
+  <h2>🔹 Table with <code>colspan</code></h2>
+  <table>
+    <tr>
+      <th colspan="3">Student Report</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Class</th>
+      <th>Section</th>
+    </tr>
+    <tr>
+      <td>Riya</td>
+      <td>10</td>
+      <td>A</td>
+    </tr>
+  </table>
+
+  <h2>🔹 Table with <code>rowspan</code></h2>
+  <table>
+    <tr>
+      <th rowspan="2">Subject</th>
+      <th colspan="2">Marks</th>
+    </tr>
+    <tr>
+      <th>Mid Term</th>
+      <th>Final</th>
+    </tr>
+    <tr>
+      <td>English</td>
+      <td>45</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Maths</td>
+      <td>50</td>
+      <td>92</td>
+    </tr>
+  </table>
+
+  <h2>🔹 Table with <code>rowspan + colspan</code></h2>
+  <table>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th colspan="2">Science</th>
+      <th colspan="2">Math</th>
+    </tr>
+    <tr>
+      <th>Practical</th>
+      <th>Theory</th>
+      <th>Practical</th>
+      <th>Theory</th>
+    </tr>
+    <tr>
+      <td>Priya</td>
+      <td>20</td>
+      <td>65</td>
+      <td>23</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>Kunal</td>
+      <td>18</td>
+      <td>61</td>
+      <td>20</td>
+      <td>67</td>
+    </tr>
+  </table>
+
+</body>
+</html>

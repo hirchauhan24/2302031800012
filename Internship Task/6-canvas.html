@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Examples</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin: 20px 0;
+        }
+        .canvas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Canvas Examples</h1>
+    
+    <div class="canvas-container">
+        <div>
+            <h3>Rectangle</h3>
+            <canvas id="canvas1" width="200" height="200"></canvas>
+        </div>
+        
+        <div>
+            <h3>Circle</h3>
+            <canvas id="canvas2" width="200" height="200"></canvas>
+        </div>
+        
+        <div>
+            <h3>Text</h3>
+            <canvas id="canvas3" width="200" height="200"></canvas>
+        </div>
+        
+        <div>
+            <h3>Gradient</h3>
+            <canvas id="canvas4" width="200" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Rectangle
+        const canvas1 = document.getElementById('canvas1');
+        const ctx1 = canvas1.getContext('2d');
+        ctx1.fillStyle = 'red';
+        ctx1.fillRect(50, 50, 100, 100);
+        
+        // Circle
+        const canvas2 = document.getElementById('canvas2');
+        const ctx2 = canvas2.getContext('2d');
+        ctx2.beginPath();
+        ctx2.arc(100, 100, 50, 0, Math.PI * 2);
+        ctx2.fillStyle = 'blue';
+        ctx2.fill();
+        ctx2.stroke();
+        
+        // Text
+        const canvas3 = document.getElementById('canvas3');
+        const ctx3 = canvas3.getContext('2d');
+        ctx3.font = '30px Arial';
+        ctx3.fillStyle = 'green';
+        ctx3.textAlign = 'center';
+        ctx3.fillText('Hello Canvas', 100, 100);
+        
+        // Gradient
+        const canvas4 = document.getElementById('canvas4');
+        const ctx4 = canvas4.getContext('2d');
+        const gradient = ctx4.createLinearGradient(0, 0, 200, 0);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(0.5, 'yellow');
+        gradient.addColorStop(1, 'blue');
+        ctx4.fillStyle = gradient;
+        ctx4.fillRect(0, 0, 200, 200);
+    </script>
+</body>
+</html>

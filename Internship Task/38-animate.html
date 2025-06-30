@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Animations</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e6f0ff);
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .animation-box {
+      width: 120px;
+      height: 120px;
+      margin: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      background-color: #4e91fc;
+    }
+
+    /* Bounce Animation */
+    .bounce {
+      animation: bounce 1.5s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    /* Spin Animation */
+    .spin {
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Fade In and Out */
+    .fade {
+      animation: fadeInOut 3s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Slide Left to Right */
+    .slide {
+      animation: slideRight 2s infinite alternate;
+    }
+
+    @keyframes slideRight {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(100px);
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .label {
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Animation Effects</h1>
+
+  <div class="row">
+    <div>
+      <div class="animation-box bounce"></div>
+      <div class="label">Bounce</div>
+    </div>
+    <div>
+      <div class="animation-box spin"></div>
+      <div class="label">Spin</div>
+    </div>
+    <div>
+      <div class="animation-box fade"></div>
+      <div class="label">Fade</div>
+    </div>
+    <div>
+      <div class="animation-box slide"></div>
+      <div class="label">Slide</div>
+    </div>
+  </div>
+
+</body>
+</html>

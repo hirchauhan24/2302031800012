@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .flex-container {
+            display: flex;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 5px;
+            flex: 1;
+        }
+        .flex-direction-row {
+            flex-direction: row;
+        }
+        .flex-direction-column {
+            flex-direction: column;
+            height: 300px;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .justify-content-center {
+            justify-content: center;
+        }
+        .justify-content-space-between {
+            justify-content: space-between;
+        }
+        .align-items-center {
+            align-items: center;
+            height: 200px;
+        }
+        .align-items-flex-end {
+            align-items: flex-end;
+            height: 200px;
+        }
+        .flex-grow-2 {
+            flex-grow: 2;
+        }
+        .flex-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .form-row label {
+            flex: 1;
+            padding: 8px;
+            font-weight: bold;
+        }
+        .form-row input, .form-row select, .form-row textarea {
+            flex: 3;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-row textarea {
+            height: 100px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .form-actions button:hover {
+            background: #45a049;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+            }
+            .form-row label, .form-row input, .form-row select, .form-row textarea {
+                flex: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Layout Examples</h1>
+    
+    <h2>Flex Direction: Row (default)</h2>
+    <div class="flex-container flex-direction-row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    
+    <h2>Flex Direction: Column</h2>
+    <div class="flex-container flex-direction-column">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    
+    <h2>Flex Wrap</h2>
+    <div class="flex-container flex-wrap">
+        <div class="flex-item" style="min-width: 200px;">Item 1</div>
+        <div class="flex-item" style="min-width: 200px;">Item 2</div>
+        <div class="flex-item" style="min-width: 200px;">Item 3</div>
+        <div class="flex-item" style="min-width: 200px;">Item 4</div>
+        <div class="flex-item" style="min-width: 200px;">Item 5</div>
+    </div>
+    
+    <h2>Justify Content: Center</h2>
+    <div class="flex-container justify-content-center">
+        <div class="flex-item" style="width: 100px;">Item 1</div>
+        <div class="flex-item" style="width: 100px;">Item 2</div>
+        <div class="flex-item" style="width: 100px;">Item 3</div>
+    </div>
+    
+    <h2>Justify Content: Space Between</h2>
+    <div class="flex-container justify-content-space-between">
+        <div class="flex-item" style="width: 100px;">Item 1</div>
+        <div class="flex-item" style="width: 100px;">Item 2</div>
+        <div class="flex-item" style="width: 100px;">Item 3</div>
+    </div>
+    
+    <h2>Align Items: Center</h2>
+    <div class="flex-container align-items-center">
+        <div class="flex-item" style="height: 50px;">Item 1</div>
+        <div class="flex-item" style="height: 100px;">Item 2</div>
+        <div class="flex-item" style="height: 75px;">Item 3</div>
+    </div>
+    
+    <h2>Align Items: Flex End</h2>
+    <div class="flex-container align-items-flex-end">
+        <div class="flex-item" style="height: 50px;">Item 1</div>
+        <div class="flex-item" style="height: 100px;">Item 2</div>
+        <div class="flex-item" style="height: 75px;">Item 3</div>
+    </div>
+    
+    <h2>Flex Grow</h2>
+    <div class="flex-container">
+        <div class="flex-item">Item 1 (flex: 1)</div>
+        <div class="flex-item flex-grow-2">Item 2 (flex: 2)</div>
+        <div class="flex-item">Item 3 (flex: 1)</div>
+    </div>
+    
+    <h1>Flexbox Form Example</h1>
+    <form class="flex-form">
+        <div class="form-row">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <div class="form-row">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+            </select>
+        </div>
+        
+        <div class="form-row">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        
+        <div class="form-actions">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

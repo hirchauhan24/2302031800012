@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f5f6fa;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      font-size: 32px;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .column {
+      background-color: #ffffff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1 1 300px;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .column i {
+      font-size: 50px;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    .column h2 {
+      font-size: 22px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .column p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .columns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <h1>Our Services</h1>
+
+  <div class="columns">
+
+    <div class="column">
+      <i class="fas fa-spa"></i>
+      <h2>Skincare</h2>
+      <p>We offer premium skincare solutions made with natural ingredients to nourish, hydrate, and rejuvenate your skin. Our products are dermatologically tested and perfect for all skin types.</p>
+    </div>
+
+    <div class="column">
+      <i class="fas fa-magic"></i>
+      <h2>Makeup</h2>
+      <p>Explore our extensive range of high-quality makeup products—from foundations to eye palettes—designed to enhance your beauty and provide a flawless look for any occasion.</p>
+    </div>
+
+    <div class="column">
+      <i class="fas fa-wind"></i>
+      <h2>Fragrances</h2>
+      <p>Discover our exclusive collection of long-lasting perfumes and body mists, crafted with unique notes to suit your mood and personality. Make every moment unforgettable with our scents.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

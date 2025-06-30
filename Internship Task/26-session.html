@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #fff8f0;
+      text-align: center;
+    }
+
+    input, button {
+      padding: 10px 15px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #f9a825;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    #greeting {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Session Storage Example</h2>
+
+  <div id="inputSection">
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveName()">Start Session</button>
+  </div>
+
+  <div id="greeting"></div>
+
+  <script>
+    // Check if session already has name
+    window.onload = function () {
+      let storedName = sessionStorage.getItem("username");
+      if (storedName) {
+        document.getElementById("inputSection").style.display = "none";
+        document.getElementById("greeting").innerText = "Welcome back, " + storedName + "!";
+      }
+    };
+
+    function saveName() {
+      let name = document.getElementById("username").value;
+      if (name.trim() !== "") {
+        sessionStorage.setItem("username", name);
+        document.getElementById("inputSection").style.display = "none";
+        document.getElementById("greeting").innerText = "Welcome, " + name + "!";
+      } else {
+        alert("Please enter a valid name.");
+      }
+    }
+  </script>
+
+</body>
+</html>

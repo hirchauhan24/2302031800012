@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Bar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    nav {
+      background-color: #6a5acd;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .nav-container a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .nav-container a:hover {
+      background-color: #483d8b;
+      color: #ffe082;
+    }
+
+    @media screen and (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="24-todolist.html">Home</a>
+      <a href="30-google&yahoo.html">About</a>
+      <a href="31-facebook.html">Services</a>
+      <a href="5-registerform.html">Products</a>
+      <a href="10-borderline.html">Contact</a>
+    </div>
+  </nav>
+
+</body>
+</html>

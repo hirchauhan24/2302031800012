@@ -1,0 +1,40 @@
+<!-- counter.js using Arrow Functions in React CDN-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Counter App</title>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!-- React root -->
+  <div id="root"></div>
+
+  <!-- React code -->
+  <script type="text/babel">
+    //  Counter component using arrow function
+    const Counter = () => {
+      // useState hook to manage count state
+      const [count, setCount] = React.useState(0);
+
+      // JSX to display buttons and count
+      return (
+        <div style={{ textAlign: "center", marginTop: "50px" }}>
+          <h2>Count: {count}</h2>
+          <button onClick={() => setCount(count + 1)}>Increment</button>
+          <button onClick={() => { count ===0 ? null : setCount(count - 1)}} style={{ marginLeft: '10px' }}>Decrement</button>
+        </div>
+      );
+    };
+
+    // Render the Counter component inside root
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Counter />);
+  </script>
+</body>
+</html>

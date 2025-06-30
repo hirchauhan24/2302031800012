@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Operators + String + Math + DOM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 30px;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2c80b4;
+    }
+    .output {
+      margin-top: 20px;
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 15px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Interactive JS Example</h2>
+
+    <!-- Inputs -->
+    <label>Enter First Number:</label>
+    <input type="number" id="num1" placeholder="e.g., 10">
+
+    <label>Enter Second Number:</label>
+    <input type="number" id="num2" placeholder="e.g., 5">
+
+    <label>Enter a Word or Sentence:</label>
+    <input type="text" id="textInput" placeholder="e.g., JavaScript is fun">
+
+    <button onclick="process()">Process Input</button>
+
+    <div class="output" id="resultBox"></div>
+  </div>
+
+  <script>
+    function process() {
+      // User inputs
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let text = document.getElementById("textInput").value;
+
+      // Check for valid numbers
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numbers!");
+        return;
+      }
+
+      if (text.trim() === "") {
+        alert("Please enter some text.");
+        return;
+      }
+
+      // --- Operators ---
+      let add = num1 + num2;
+      let sub = num1 - num2;
+      let mul = num1 * num2;
+      let div = (num2 !== 0) ? (num1 / num2).toFixed(2) : "Cannot divide by 0";
+
+      // --- String Methods ---
+      let upper = text.toUpperCase();
+      let length = text.length;
+      let includesJs = text.toLowerCase().includes("js") ? "Yes" : "No";
+
+      // --- Math Functions ---
+      let round1 = Math.round(num1);
+      let square2 = Math.pow(num2, 2);
+      let sqrt1 = Math.sqrt(num1).toFixed(2);
+
+      // --- DOM Output ---
+      let result = `
+🔢 OPERATIONS:
+Addition: ${add}
+Subtraction: ${sub}
+Multiplication: ${mul}
+Division: ${div}
+
+📝 STRING OPERATIONS:
+Input Text: ${text}
+Uppercase: ${upper}
+Length: ${length}
+Contains "js"?: ${includesJs}
+
+📐 MATH FUNCTIONS:
+Round of First Number: ${round1}
+Square of Second Number: ${square2}
+Square Root of First Number: ${sqrt1}
+      `;
+
+      document.getElementById("resultBox").innerText = result;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .media-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #444;
+        }
+        audio, video {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .controls {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5 Audio and Video Examples</h1>
+    
+    <div class="media-container">
+        <div class="media-item">
+            <h2>Audio Example</h2>
+            <audio id="audioPlayer" controls>
+                <source src="images/audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <div class="controls">
+                <button onclick="document.getElementById('audioPlayer').play()">Play</button>
+                <button onclick="document.getElementById('audioPlayer').pause()">Pause</button>
+                <button onclick="document.getElementById('audioPlayer').volume += 0.1">Volume +</button>
+                <button onclick="document.getElementById('audioPlayer').volume -= 0.1">Volume -</button>
+                <button onclick="document.getElementById('audioPlayer').muted = !document.getElementById('audioPlayer').muted">
+                    Toggle Mute
+                </button>
+            </div>
+        </div>
+        
+        <div class="media-item">
+            <h2>Video Example</h2>
+            <video id="videoPlayer" width="100%" controls poster="https://via.placeholder.com/800x450">
+                <source src="images/valo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <div class="controls">
+                <button onclick="document.getElementById('videoPlayer').play()">Play</button>
+                <button onclick="document.getElementById('videoPlayer').pause()">Pause</button>
+                <button onclick="document.getElementById('videoPlayer').currentTime += 5">Skip +5s</button>
+                <button onclick="document.getElementById('videoPlayer').currentTime -= 5">Skip -5s</button>
+                <button onclick="document.getElementById('videoPlayer').requestFullscreen()">Fullscreen</button>
+                <button onclick="document.getElementById('videoPlayer').playbackRate = 1.0">1x Speed</button>
+                <button onclick="document.getElementById('videoPlayer').playbackRate = 1.5">1.5x Speed</button>
+                <button onclick="document.getElementById('videoPlayer').playbackRate = 2.0">2x Speed</button>
+            </div>
+        </div>
+        
+        <div class="media-item">
+            <h2>Custom Audio Player</h2>
+            <audio id="customAudio">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+            </audio>
+            
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button onclick="playPause()">Play/Pause</button>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" onchange="setVolume()">
+                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            </div>
+            
+            <input type="range" id="seekBar" style="width: 100%; margin-top: 10px;" value="0">
+            
+            <script>
+                const audio = document.getElementById('customAudio');
+                const seekBar = document.getElementById('seekBar');
+                const currentTime = document.getElementById('currentTime');
+                const duration = document.getElementById('duration');
+                
+                audio.addEventListener('timeupdate', function() {
+                    // Update seek bar
+                    seekBar.value = audio.currentTime / audio.duration * 100;
+                    
+                    // Update time display
+                    currentTime.textContent = formatTime(audio.currentTime);
+                    if (!isNaN(audio.duration)) {
+                        duration.textContent = formatTime(audio.duration);
+                    }
+                });
+                
+                seekBar.addEventListener('input', function() {
+                    const seekTime = audio.duration * (seekBar.value / 100);
+                    audio.currentTime = seekTime;
+                });
+                
+                function playPause() {
+                    if (audio.paused) {
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                }
+                
+                function setVolume() {
+                    audio.volume = document.getElementById('volumeControl').value;
+                }
+                
+                function formatTime(seconds) {
+                    const mins = Math.floor(seconds / 60);
+                    const secs = Math.floor(seconds % 60);
+                    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

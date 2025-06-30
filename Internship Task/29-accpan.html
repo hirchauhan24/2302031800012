@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accordion Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fef9f4;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #3c2a21;
+      margin-bottom: 30px;
+    }
+
+    .accordion {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .accordion-item {
+      background: #fff4e6;
+      border: 1px solid #f5c7a9;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .accordion-header {
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      background: #ffdab9;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background: #ffcba4;
+    }
+
+    .accordion-content {
+      padding: 15px 20px;
+      display: none;
+      border-top: 1px solid #e5b890;
+      background-color: #fff9f3;
+    }
+
+    .active + .accordion-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🌟 Accordion Panel Example</h2>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">Section 1: Introduction</div>
+      <div class="accordion-content">
+        <p>This is the content for the first section. You can add any HTML content here.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Section 2: Services</div>
+      <div class="accordion-content">
+        <p>We offer a variety of services including skincare, makeup, and wellness consulting.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Section 3: Contact Info</div>
+      <div class="accordion-content">
+        <p>Contact us at: yourbeauty@example.com | Phone: 9876543210</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        header.classList.toggle('active');
+
+        const content = header.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+
+        // Optional: close others
+        headers.forEach(otherHeader => {
+          if (otherHeader !== header) {
+            otherHeader.classList.remove('active');
+            otherHeader.nextElementSibling.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

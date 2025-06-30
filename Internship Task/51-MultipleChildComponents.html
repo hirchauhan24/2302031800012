@@ -1,0 +1,42 @@
+<!--  Work with Multiple Child Components in React -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multiple Children in React</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //  Child component
+    const Student = ({ name, roll }) => {
+      return (
+        <div>
+          <h3>Name: {name}</h3>
+          <p>Roll No: {roll}</p>
+          <hr />
+        </div>
+      );
+    };
+
+    //  Parent component rendering multiple children
+    const Classroom = () => {
+      return (
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <h1>Student List</h1>
+          <Student name="Hir" roll="101" />
+          <Student name="Umang" roll="102" />
+          <Student name="Devershi" roll="103" />
+        </div>
+      );
+    };
+    //  Render the parent component
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Classroom />);
+  </script>
+</body>
+</html>

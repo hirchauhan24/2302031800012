@@ -1,0 +1,63 @@
+<!--  Hooks Examples in React -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React Hooks Examples</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    const HooksDemo = () => {
+      const [name, setName] = useState('');
+      const [count, setCount] = useState(0);
+      const inputRef = useRef(null);
+
+      // useEffect: Log on name change
+      useEffect(() => {
+        if (name) {
+          console.log(`Name changed to: ${name}`);
+        }
+      }, [name]);
+
+      //  useEffect: Update document title with count
+      useEffect(() => {
+        document.title = `Clicked ${count} times`;
+      }, [count]);
+
+      //  useRef: Focus input field on mount
+      useEffect(() => {
+        inputRef.current.focus();
+      }, []);
+
+      return (
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <h2>React Hooks Demo</h2>
+
+          {/* useState and useRef example */}
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder="Enter name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <p>Hello, {name || 'Guest'}!</p>
+
+          {/* useState and useEffect example */}
+          <button onClick={() => setCount(count + 1)}>Clicked {count} times</button>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<HooksDemo />);
+  </script>
+</body>
+</html>

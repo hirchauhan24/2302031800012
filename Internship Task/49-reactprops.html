@@ -1,0 +1,38 @@
+<!--  React Props using ES6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Props Example</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //  Child Component that receives props
+    const Welcome = ({ name, age }) => {
+      return (
+        <h2>Hello, {name}! You are {age} years old.</h2>
+      );
+    };
+
+    //  Parent Component that sends props
+    const App = () => {
+      return (
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <h1>React Props Example</h1>
+          <Welcome name="Hir" age={20} />
+          <Welcome name="Umang" age={21} />
+        </div>
+      );
+    };
+
+    //  Render the App
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>

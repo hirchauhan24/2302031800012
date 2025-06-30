@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Box Model Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .box-model-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background-color: #fff;
+      border: 2px solid #333;
+      margin: 20px 0;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .box-1,
+    .box-2 {
+      width: 350px; /* Increase total width so content fits inside */
+      height: auto;
+      padding: 20px;
+      margin: 30px auto;
+      background-color: #fadbd8;
+      box-sizing: content-box; /* default for box-1 */
+    }
+
+    .box-1 {
+      border: 5px solid #e74c3c;
+    }
+
+    .box-2 {
+      box-sizing: border-box;
+      background-color: #d6eaf8;
+      border: 5px solid #3498db;
+    }
+
+    .box-3 {
+      width: 50%;
+      padding: 2em;
+      margin: 2em auto;
+      border: 1em double #2ecc71;
+      background-color: #d5f5e3;
+    }
+
+    .box-4 {
+      max-width: 600px;
+      min-height: 100px;
+      padding: 10px 30px;
+      margin: 10px 5%;
+      border-top: 10px solid #9b59b6;
+      border-bottom: 10px solid #9b59b6;
+      background-color: #e8daef;
+    }
+
+    .box-5 {
+      width: 80vw;
+      height: 20vh;
+      padding: 5vmin;
+      margin: 5vmin auto;
+      border: 1vmin solid #f39c12;
+      background-color: #fdebd0;
+    }
+
+    .box-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .dimensions {
+      background-color: #f2f3f4;
+      padding: 10px;
+      margin-top: 10px;
+      border-left: 3px solid #95a5a6;
+      font-family: monospace;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Box Model Examples</h1>
+
+  <div class="box-model-container">
+    
+    <div class="box box-1">
+      <div class="box-title">Content Box (default box-sizing)</div>
+      <p>This box uses the traditional box model where width/height only apply to content.</p>
+      <div class="dimensions">
+        Total width = width (350px)<br>
+        Padding = 20px * 2<br>
+        Border = 5px * 2
+      </div>
+    </div>
+
+    <div class="box box-2">
+      <div class="box-title">Border Box (box-sizing: border-box)</div>
+      <p>This box includes padding and border in the specified width/height.</p>
+      <div class="dimensions">
+        Width = 350px (includes padding and border)<br>
+        Content width = 350 - (20px * 2) - (5px * 2) = 300px
+      </div>
+    </div>
+
+    <div class="box box-3">
+      <div class="box-title">Percentage Width with em Units</div>
+      <p>This box uses percentage width and em units for padding/margin/border.</p>
+      <div class="dimensions">
+        Width: 50% of parent<br>
+        Padding: 2em (32px if base font-size is 16px)<br>
+        Border: 1em (16px) double border
+      </div>
+    </div>
+
+    <div class="box box-4">
+      <div class="box-title">Max-Width with Viewport Units</div>
+      <p>This box won't exceed 600px width and has viewport-based margins.</p>
+      <div class="dimensions">
+        Max-width: 600px<br>
+        Margin: 10px 5% (5% of parent width)<br>
+        Border only on top and bottom
+      </div>
+    </div>
+
+    <div class="box box-5">
+      <div class="box-title">Viewport Units</div>
+      <p>This box uses viewport units for width, height, padding, margin, and border.</p>
+      <div class="dimensions">
+        Width: 80vw (80% of viewport width)<br>
+        Height: 20vh (20% of viewport height)<br>
+        Padding: 5vmin (5% of smaller viewport dimension)
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
